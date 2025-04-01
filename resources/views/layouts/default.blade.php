@@ -12,7 +12,6 @@
 <body>
 
     <header>
-        <img src="{{ asset('images/download.png')}}" alt="">
         @yield('header')
     </header>
 
