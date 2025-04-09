@@ -28,7 +28,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-<<!-- header End -->
+<!-- header End -->
 
    <!-- Navbar Start -->
    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
@@ -57,7 +57,7 @@
     </div>
 </nav>
 <!-- Navbar End -->
-{{-- <!-- Header Start -->
+<!-- Header Start -->
 <div class="container-fluid bg-primary py-5 mb-5 page-header">
     <div class="container py-5">
         <div class="row justify-content-center">
@@ -74,7 +74,7 @@
         </div>
     </div>
 </div>
-<!-- Header End --> --}}
+<!-- Header End -->
 
 @yield('content')
 <!-- Footer Start -->

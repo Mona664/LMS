@@ -28,4 +28,8 @@ class PagesController extends Controller
     public function testimonial(){
         return view('testimonial');
     }
+    public function login(){
+        return view('login');
+    }
+
 }
