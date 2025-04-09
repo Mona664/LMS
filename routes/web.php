@@ -21,3 +21,5 @@ Route::get('/home','App\Http\Controllers\HomeController@home')->name('home');
 Route::get('/faculties/add','App\Http\Controllers\FacultyController@add');
 Route::get('/faculties/all','App\Http\Controllers\FacultyController@all');
 Route::post('/faculties/store','App\Http\Controllers\FacultyController@store');
+Route::get('/faculties/delete/{id}','App\Http\Controllers\FacultyController@delete');
+Route::get('/faculties/edit/{id}','App\Http\Controllers\FacultyController@edit');

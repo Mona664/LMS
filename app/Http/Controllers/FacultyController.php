@@ -10,9 +10,13 @@ class FacultyController extends Controller
     public function add(){
         return view('Dashboard.Faculties.add');
     }
+
     public function all(){
-        return view('Dashboard.Faculties.all');
+        $faculties = Faculty::all();
+        $title ='All Faculties';
+        return view('Dashboard.Faculties.all', compact('faculties', 'title'));
     }
+
     public function store(Request $request){
     $faculty = new Faculty;
     $faculty->name =$request->name;
@@ -25,6 +29,21 @@ class FacultyController extends Controller
     $faculty->location_id=0;
 
     $faculty->save();
-    return back();
+    return redirect('/faculties/all');
     }
+    public function delete($id){
+        //! 1 way
+        // $faculty = Faculty::find($id);
+        //2 way
+        $faculty = Faculty::where('id', $id)->first();
+        $faculty->delete();
+        return back();
+
+    }
+    public function edit($id){
+        $faculty = Faculty::find($id);
+        return view('Dashboard.Faculties.edit', compact('faculty'));
+
+    }
+
 }
