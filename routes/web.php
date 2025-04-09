@@ -23,3 +23,4 @@ Route::get('/faculties/all','App\Http\Controllers\FacultyController@all');
 Route::post('/faculties/store','App\Http\Controllers\FacultyController@store');
 Route::get('/faculties/delete/{id}','App\Http\Controllers\FacultyController@delete');
 Route::get('/faculties/edit/{id}','App\Http\Controllers\FacultyController@edit');
+Route::post('/faculties/update/{id}','App\Http\Controllers\FacultyController@update');

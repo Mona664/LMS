@@ -22,13 +22,13 @@ class FacultyController extends Controller
     $faculty->name =$request->name;
     $faculty->studies_year =$request->year;
     $faculty->website =$request->website;
-    $faculty->website="logo";
+    $faculty->logo="logo";
     $faculty->hours_count =$request->hours_count;
     $faculty->description =$request->description;
     $faculty->mat_counts =$request->mat_counts;
     $faculty->location_id=0;
-
     $faculty->save();
+
     return redirect('/faculties/all');
     }
     public function delete($id){
@@ -45,5 +45,22 @@ class FacultyController extends Controller
         return view('Dashboard.Faculties.edit', compact('faculty'));
 
     }
+    public function update($id , Request $request){
+        $faculty = Faculty::find($id);
 
+        $faculty->name =$request->name;
+        $faculty->studies_year =$request->year;
+        $faculty->website =$request->website;
+        $faculty->logo="logo";
+        $faculty->hours_count =$request->hours_count;
+        $faculty->description =$request->description;
+        $faculty->mat_counts =$request->mat_counts;
+        $faculty->location_id=0;
+
+        $faculty->save();
+
+        return redirect('/faculties/all');
+
+
+    }
 }

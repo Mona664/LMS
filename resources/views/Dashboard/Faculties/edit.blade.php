@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1 class="text-center">Edit Page</h1>
-   <form action="/faculties/store" method="POST">
+   <form action="/faculties/update/{{$faculty->id}}" method="POST">
 
     @csrf
     <div class="mb-3 mt-3">
@@ -45,12 +45,9 @@
         <label for="location_id" class="form-label">Location_id:</label>
         <input type="number" class="form-control" id="location_id" placeholder="Enter location_id" name="location_id">
       </div> --}}
-    <button type="submit" class="btn btn-primary">Edit</button>
+    <button type="submit" class="btn btn-primary">Update</button>
   </form>
 
-
-  {{-- $table->string('logo')->nullable();
-   $table->bigInteger('location_id');--}}
 
 </div>
 @endsection
