@@ -49,8 +49,8 @@
                                    Mat
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item">All</a>
-                                    <a class="dropdown-item">Add</a>
+                                    <a class="dropdown-item" href="/mat/all">All</a>
+                                    <a class="dropdown-item" href="/mat/add">Add</a>
 
                                 </div>
                             </div>

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<h1 class="text-center">Add Faculty</h1>
 <div class="container">
    <form action="/faculties/store" method="POST">
     @csrf
